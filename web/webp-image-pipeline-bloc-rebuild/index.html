@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<title>WebP Done Properly: The Image Pipeline Behind a Real Rebuild | APX Digital</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Real before/after weights from the BLOC rebuild: a 187,685-byte JPEG became a 67,746-byte WebP at double the pixels. srcset, lazy loading, measured.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://blog.apxdigital.io/web/webp-image-pipeline-bloc-rebuild">
+<meta property="og:title" content="WebP done properly">
+<meta property="og:description" content="The image pipeline behind BLOC&#x27;s rebuild — every byte measured.">
+<meta property="og:image" content="https://blog.apxdigital.io/web/webp-image-pipeline-bloc-rebuild/og-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://blog.apxdigital.io/web/webp-image-pipeline-bloc-rebuild">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="APX Digital">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WebP done properly">
+<meta name="twitter:description" content="The image pipeline behind BLOC&#x27;s rebuild — every byte measured.">
+<meta name="twitter:image" content="https://blog.apxdigital.io/web/webp-image-pipeline-bloc-rebuild/og-1200x630.png">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "WebP done properly: the image pipeline behind BLOC's rebuild (real weights, before and after)",
+    "description": "Measured WebP conversion results from the BLOC Architecture rebuild: file weights, dimensions, srcSet and lazy-loading strategy.",
+    "inLanguage": "en-GB",
+    "datePublished": "2026-09-03",
+    "image": "https://blog.apxdigital.io/web/webp-image-pipeline-bloc-rebuild/og-1200x630.png",
+    "author": {
+      "@type": "Organization",
+      "name": "Jamie \u2014 APX Digital",
+      "url": "https://apxdigital.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "APX Digital",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://apxdigital.io/favicon.ico"
+      }
+    },
+    "mainEntityOfPage": "https://blog.apxdigital.io/web/webp-image-pipeline-bloc-rebuild"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://apxdigital.io"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://blog.apxdigital.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Web",
+        "item": "https://blog.apxdigital.io/web"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "WebP image pipeline"
+      }
+    ]
+  }
+]
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root { --acid:#7FEE64; --ink:#0A0A0A; --paper:#F7F7F5; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--paper); color:var(--ink); font-family:'Space Mono',ui-monospace,monospace; line-height:1.7; -webkit-font-smoothing:antialiased; }
+  header { border-bottom:2px solid var(--ink); padding:22px 40px; display:flex; justify-content:space-between; align-items:center; }
+  .brand { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:.02em; font-size:20px; }
+  .brand .accent { color:var(--acid); }
+  nav a { color:var(--ink); text-decoration:none; font-size:12px; text-transform:uppercase; letter-spacing:.15em; margin-left:24px; }
+  nav a:hover { border-bottom:2px solid var(--acid); }
+  main { max-width:780px; margin:0 auto; padding:56px 40px 80px; }
+  .crumb { font-size:12px; letter-spacing:.15em; text-transform:uppercase; color:#555; margin-bottom:24px; }
+  .crumb a { color:#555; }
+  h1 { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; font-size:38px; line-height:1.1; letter-spacing:.01em; margin-bottom:16px; }
+  .meta { font-size:13px; color:#555; margin-bottom:40px; padding-bottom:24px; border-bottom:2px solid var(--ink); }
+  h2 { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; font-size:20px; margin:44px 0 14px; letter-spacing:.01em; }
+  h3 { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; font-size:15px; margin:32px 0 10px; }
+  p { margin-bottom:18px; }
+  a { color:var(--ink); text-decoration:underline; text-underline-offset:3px; }
+  a:hover { color:var(--acid); }
+  ul, ol { margin:0 0 18px 22px; }
+  li { margin-bottom:8px; }
+  strong { font-weight:700; }
+  .tablewrap { overflow-x:auto; margin:24px 0; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th, td { border:1px solid #ccc; padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--ink); color:var(--acid); font-family:'Archivo',sans-serif; text-transform:uppercase; font-size:12px; letter-spacing:.08em; }
+  code { background:#eee; padding:1px 5px; font-size:.9em; }
+  .cta { margin-top:48px; border-top:2px solid var(--ink); padding-top:28px; text-align:center; }
+  .cta a { display:inline-block; background:var(--ink); color:var(--acid); font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; text-decoration:none; padding:16px 34px; font-size:14px; letter-spacing:.08em; }
+  .cta a:hover { background:var(--acid); color:var(--ink); }
+  footer { border-top:2px solid var(--ink); padding:22px 40px; font-size:12px; color:#555; display:flex; justify-content:space-between; }
+  footer a { color:#555; }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="/" style="text-decoration:none;color:var(--ink)">APX<span class="accent">.</span></a></div>
+  <nav>
+    <a href="/">Blog</a>
+    <a href="https://apxdigital.io/websites">Services</a>
+    <a href="https://apxdigital.io">Site</a>
+  </nav>
+</header>
+<main>
+  <div class="crumb"><a href="/">Blog</a> / <a href="/web/">Web Builds</a> / <span>WebP Done Properly: The Image Pipeline Behind a Real Rebuild | APX Digital</span></div>
+  <h1>WebP Done Properly: The Image Pipeline Behind a Real Rebuild | APX Digital</h1>
+  <div class="meta">Published 03 September 2026 &nbsp;·&nbsp; APX Digital</div>
+  <h1>WebP done properly: the image pipeline behind BLOC's rebuild (real weights, before and after)</h1>
+<p>An architecture site is an image site wearing a serious coat. Get the images wrong and you either ship blurry renders or a 12 MB homepage — and architects notice the blur before the client notices the wait. Here is the actual pipeline we ran for the BLOC Architecture rebuild, with every byte measured from real files rather than a stock claim.</p>
+<h2>What "before" looked like</h2>
+<p>The source library arrived as camera/screenshot output with no consideration for the web at all. Real examples, measured from the build folder on 3 September 2026:</p>
+<ul>
+<li><code>unnamed.jpg</code> — 187,685 bytes at 940×576 px. That's 200 bytes per pixel-equivalent for a JPEG; a hero image at this weight loads on desktop and stalls on a phone on bad signal.</li>
+<li>The "before" page captures themselves: four PNGs, 776 KB to 4.5 MB. A PNG of a photographic screenshot is the classic mistake — lossless compression of photos is terrible.</li>
+<li>One PDF materials schedule measured 666,119 bytes. Fine as a download; a disaster if someone tries to preview it as an image.</li>
+</ul>
+<p>The site's own history proves why discipline matters: an earlier code snapshot (1,250 lines of <code>index.html</code>, dated 27 August 2026 in the project folder) referenced zero WebP files and six plain `<img>` tags. The version deployed later that week moved everything to converted WebP with dimensioned delivery — a one-week lesson in "ship, look, fix".</p>
+<h2>The conversion pass: what the numbers actually did</h2>
+<p>Every webp in the pipeline was re-measured with <code>stat</code> and `sips` on 3 September 2026:</p>
+<div class="tablewrap">
+<table><tr><th>Asset</th><th>Bytes</th><th>Dimensions</th><th>Notes</th></tr><tr><td><code>unnamed.jpg</code> (original)</td><td>187,685</td><td>940×576</td><td>source JPEG</td></tr><tr><td><code>toWEBP/unnamed13.webp</code></td><td>67,746</td><td>1280×901</td><td>64% lighter than the JPEG at ~2.1× the pixel count</td></tr><tr><td><code>toWEBP/unnamed10.webp</code></td><td>68,726</td><td>1280×903</td><td>same pass</td></tr><tr><td><code>toWEBP/unnamed11.webp</code></td><td>97,950</td><td>1280×898</td><td>more detail, more weight</td></tr><tr><td><code>toWEBP/unnamed12.webp</code></td><td>148,898</td><td>1176×831</td><td>busiest render — kept its own quality budget</td></tr></table></div>
+<p>Google's own WebP compression study puts lossy WebP at 25–34% smaller than JPEG at equivalent SSIM — our measured conversions beat the headline because the originals were badly-encoded JPEGs. Source: developers.google.com/speed/webp/docs/webp_study, accessed 3 September 2026.</p>
+<p>The honest asterisks sit in the project-plan images. The three materials-schedule WebPs (Shelly Lane 568,862 B, Land at Yew Tree Lane 419,894 B, Ulverley Crescent 330,570 B — all 3308×2339) are drawings, not photos: dense line work at high resolution. They were converted, not resized, because a homeowner zooms a floor plan to check a bedroom size. A 568 KB plan image is a deliberate trade; a 568 KB <em>hero</em> would not be. The batch of general imagery lands between 144,606 and 301,026 bytes at 1280 px wide — that is the ceiling we treat as acceptable for a single art-directed image, and the hero at 195,878 bytes sits inside it.</p>
+<p>Second asterisk: the hero is the one file we left alone. The deployed <code>Img hero large.webp</code> (195,878 bytes, 940 px wide) is the same file we measured from the source batch — it inherited the 940×576 dimensions of the original JPEG instead of getting a 1280 px pass like the rest of the library. At 940 px it's fine on a phone and slightly soft on a wide desktop. It's next on the list, and we'd rather say so here than pretend the pipeline is uniform.</p>
+<h2>Delivery, not just format</h2>
+<p>WebP is half the job; the other half is not sending 1280 px to a 390 px phone. The live production bundle (fetched from blocarc.co.uk with curl on 3 September 2026, 512,885 bytes) does three measurable things:</p>
+<ol>
+<li><strong>Responsive candidates.</strong> <code>srcSet</code> appears five times in the bundle (plus two lowercase `srcset` occurrences in raw markup), so images ship at a size matched to the viewport rather than one oversized file everywhere.</li>
+<li><strong>Lazy loading by default.</strong> Seven explicit <code>loading:"lazy"</code> declarations versus a single `loading:"eager"` — the above-the-fold hero — so nothing below the viewport competes with the first paint.</li>
+<li><strong>Dimensioned media.</strong> Content images are declared with explicit <code>width</code>/`height` pairs in the bundle (measured examples: 1993×538, 1280×908, 940×576), which reserves layout space so text doesn't jump as photos arrive — the cheapest CLS insurance available.</li>
+</ol>
+<p>We are not going to print a Lighthouse score — we didn't run one this week and a score from a folder of files is fiction. The claim is narrower and true: every WebP in the conversion pass (67,746–148,898 bytes) is lighter than the single source JPEG that came in (187,685 bytes) while carrying roughly double the pixels, and the site serves those bytes responsively instead of all at once. For an image-led practice site, that's the entire game — and when the site moves to a bigger scheme library, <a href="/web/template-site-vs-bespoke-build-cost/">the same pipeline is exactly what a bespoke build maintains</a>. If you want to see how it looked end-to-end, <a href="/web/bloc-architecture-site-rebuild/">the before/after case study is here</a>.</p>
+<h2>The checklist we actually run</h2>
+<ul>
+<li>[ ] Screenshot/asset intake: reject photographic PNGs, convert at ingest, never at ship time</li>
+<li>[ ] Encode lossy WebP at the delivery size you actually need; re-measure, don't assume</li>
+<li>[ ] Drawings and line-work get conversion but no resize — zoom is the use case</li>
+<li>[ ] Hero gets eager loading; everything else lazy</li>
+<li>[ ] <code>width</code>/`height` on every image; `srcSet` for any image that appears at two-plus sizes</li>
+<li>[ ] Log byte weights per asset; anything over ~300 KB for non-drawing imagery goes back through the pass</li>
+</ul>
+<p>---</p>
+<p><strong>Your site is 60–90% images by weight.</strong> APX bakes this pipeline into every build tier — see the <a href="https://apxdigital.io/websites">website service</a> or email Info@apxdigital.io · 07753 226214.</p>
+  <div class="cta">
+    <p style="margin-bottom:16px;font-size:14px;">Need a straight answer on this for your business?</p>
+    <a href="https://apxdigital.io/websites">Talk to APX Digital</a>
+  </div>
+</main>
+<footer>
+  <div>APX Digital — Web Builds briefs</div>
+  <div><a href="https://apxdigital.io">apxdigital.io</a> · <a href="mailto:Info@apxdigital.io">Info@apxdigital.io</a></div>
+</footer>
+</body>
+</html>

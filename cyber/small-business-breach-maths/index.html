@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<title>UK Small Business Breach Costs: What One Ransomware Week Really Costs | APX Digital</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="UK breach cost medians vs the damaging tail: gov.uk survey numbers, ransomware prevalence, and a worked week-one cost model for a five-person firm.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://blog.apxdigital.io/cyber/small-business-breach-maths/">
+<meta property="og:title" content="Your breach bill is a median until it isn&#x27;t">
+<meta property="og:description" content="43% of UK businesses breached; median cost £0; the damaging tail costs far more. The week-one maths for a small firm, from DSIT&#x27;s own survey.">
+<meta property="og:image" content="https://blog.apxdigital.io/cyber/small-business-breach-maths/og-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://blog.apxdigital.io/cyber/small-business-breach-maths/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="APX Digital">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Your breach bill is a median until it isn&#x27;t">
+<meta name="twitter:description" content="43% of UK businesses breached; median cost £0; the damaging tail costs far more. The week-one maths for a small firm, from DSIT&#x27;s own survey.">
+<meta name="twitter:image" content="https://blog.apxdigital.io/cyber/small-business-breach-maths/og-1200x630.png">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "UK Small Business Breach Costs: What One Ransomware Week Really Costs",
+    "description": "UK breach cost medians vs the damaging tail: gov.uk survey numbers, ransomware prevalence, and a worked week-one cost model for a five-person firm.",
+    "inLanguage": "en-GB",
+    "author": {
+      "@type": "Organization",
+      "name": "APX Digital",
+      "url": "https://apxdigital.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "APX Digital",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://apxdigital.io/favicon.ico"
+      }
+    },
+    "datePublished": "2026-09-03",
+    "image": "https://blog.apxdigital.io/cyber/small-business-breach-maths/og-1200x630.png",
+    "mainEntityOfPage": "https://blog.apxdigital.io/cyber/small-business-breach-maths/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://apxdigital.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://blog.apxdigital.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Cyber",
+        "item": "https://blog.apxdigital.io/cyber/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "UK Small Business Breach Costs"
+      }
+    ]
+  }
+]
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root { --acid:#7FEE64; --ink:#0A0A0A; --paper:#F7F7F5; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--paper); color:var(--ink); font-family:'Space Mono',ui-monospace,monospace; line-height:1.7; -webkit-font-smoothing:antialiased; }
+  header { border-bottom:2px solid var(--ink); padding:22px 40px; display:flex; justify-content:space-between; align-items:center; }
+  .brand { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:.02em; font-size:20px; }
+  .brand .accent { color:var(--acid); }
+  nav a { color:var(--ink); text-decoration:none; font-size:12px; text-transform:uppercase; letter-spacing:.15em; margin-left:24px; }
+  nav a:hover { border-bottom:2px solid var(--acid); }
+  main { max-width:780px; margin:0 auto; padding:56px 40px 80px; }
+  .crumb { font-size:12px; letter-spacing:.15em; text-transform:uppercase; color:#555; margin-bottom:24px; }
+  .crumb a { color:#555; }
+  h1 { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; font-size:38px; line-height:1.1; letter-spacing:.01em; margin-bottom:16px; }
+  .meta { font-size:13px; color:#555; margin-bottom:40px; padding-bottom:24px; border-bottom:2px solid var(--ink); }
+  h2 { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; font-size:20px; margin:44px 0 14px; letter-spacing:.01em; }
+  h3 { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; font-size:15px; margin:32px 0 10px; }
+  p { margin-bottom:18px; }
+  a { color:var(--ink); text-decoration:underline; text-underline-offset:3px; }
+  a:hover { color:var(--acid); }
+  ul, ol { margin:0 0 18px 22px; }
+  li { margin-bottom:8px; }
+  strong { font-weight:700; }
+  .tablewrap { overflow-x:auto; margin:24px 0; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th, td { border:1px solid #ccc; padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--ink); color:var(--acid); font-family:'Archivo',sans-serif; text-transform:uppercase; font-size:12px; letter-spacing:.08em; }
+  code { background:#eee; padding:1px 5px; font-size:.9em; }
+  .cta { margin-top:48px; border-top:2px solid var(--ink); padding-top:28px; text-align:center; }
+  .cta a { display:inline-block; background:var(--ink); color:var(--acid); font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; text-decoration:none; padding:16px 34px; font-size:14px; letter-spacing:.08em; }
+  .cta a:hover { background:var(--acid); color:var(--ink); }
+  footer { border-top:2px solid var(--ink); padding:22px 40px; font-size:12px; color:#555; display:flex; justify-content:space-between; }
+  footer a { color:#555; }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="/" style="text-decoration:none;color:var(--ink)">APX<span class="accent">.</span></a></div>
+  <nav>
+    <a href="/">Blog</a>
+    <a href="https://apxdigital.io/websites">Services</a>
+    <a href="https://apxdigital.io">Site</a>
+  </nav>
+</header>
+<main>
+  <div class="crumb"><a href="/">Blog</a> / <a href="/cyber/">Cybersecurity</a> / <span>UK Small Business Breach Costs: What One Ransomware Week Really Costs | APX Digital</span></div>
+  <h1>UK Small Business Breach Costs: What One Ransomware Week Really Costs | APX Digital</h1>
+  <div class="meta">Published 03 September 2026 &nbsp;·&nbsp; APX Digital</div>
+  <h1>43% of UK businesses were breached last year. The median cost they reported was £0. Here's why your planning shouldn't stop at the median — and what one genuinely bad week does to a small firm's numbers.</h1>
+<p><strong>The breach maths every owner should do before the incident, not during it.</strong></p>
+<p>As of September 2026, the freshest official picture is the government's <a href="https://www.gov.uk/government/statistics/cyber-security-breaches-survey-20252026/cyber-security-breaches-survey-20252026">Cyber Security Breaches Survey 2025/2026</a> (DSIT and the Home Office; fieldwork August–December 2025). Two of its numbers get quoted past each other so often it's worth lining them up properly.</p>
+<h2>The two numbers that are both true</h2>
+<p><strong>Number one: most breaches are cheap.</strong> Among businesses that identified a breach or attack, the median perceived cost of the most disruptive one was <strong>£0</strong>. The middle 50% of responses fell between £0 and £200. 72% said recovery took "no time at all", and 87% restored operations within 24 hours. That's the boring majority: a phishing email that got reported, a password reset, everyone back to work.</p>
+<p><strong>Number two: the tail is where businesses die.</strong> The survey's own 95th-percentile figures: <strong>£4,000 for micro and small businesses</strong>, rising to £10,000 for medium/large. Among businesses that suffered an actual outcome from a breach, 11% reported being stopped from carrying out day-to-day work, loss of revenue or share value doubled-ish year on year (2% to 5%), and reputational damage rose from 1% to 3%. And cyber-facilitated fraud — where a breach actually moves your money — hit an estimated 3% of all businesses (~43,000 firms), with the top 10% of those cases costing <strong>£12,500 or more</strong>.</p>
+<p>Averages hide this. Medians hide it harder. You don't get to choose which percentile you live in.</p>
+<h2>The ransomware week, modelled honestly</h2>
+<p>Ransomware is rarer than the panic suggests — <strong>1% of businesses</strong> reported a ransomware attack in 2025/2026, down from 3% the two prior years (though it rose among charities to 1%). Rare <em>and</em> catastrophic is exactly the profile you plan for, not ignore.</p>
+<p>So do the arithmetic for your own firm. This is a worked example, not a government statistic — fill it with your real numbers:</p>
+<div class="tablewrap">
+<table><tr><th>Line</th><th>What it actually is</th><th>Typical week-one shape</th></tr><tr><td>Downtime</td><td>Every day encrypted or rebuilding = zero invoicing</td><td>Your weekly gross margin, gone</td></tr><tr><td>Recovery labour</td><td>Overtime, contractors, re-imaging, restoring data</td><td>Your contractor's day rate × the days it takes</td></tr><tr><td>The ransom decision</td><td>49% of businesses have a policy not to pay; a quarter don't know their policy — you'd be deciding at 2am on day one</td><td>Negotiators, then restoration anyway</td></tr><tr><td>Notification</td><td>Customers, insurer, possibly ICO if personal data went</td><td>Your legal fees, not theirs</td></tr><tr><td>The quiet costs</td><td>Won't-win tenders asking "do you have incident history?", churn you never trace</td><td>The part that closes firms</td></tr></table></div>
+<p>A five-person service firm billing £2,000 a day isn't unusual. A week out of operation is <strong>£10,000 of unbilled work</strong> before a single contractor invoice — which already exceeds the survey's £4,000 95th-percentile <em>perceived</em> cost, because owners systematically count the clean-up and not the trading gap. Multiply the trading gap by "the backups needed rebuilding from scratch, not just restoring" and you're in the tail.</p>
+<p>The one defence that changes every line in that table is a backup you have actually restored from. The one that costs real money is the incident you didn't prevent because the lockers, passwords and mail settings were never done. Our <a href="/psti-default-passwords-small-business/">PSTI default-password audit checklist</a> takes one evening; the <a href="/m365-default-settings-mail-doors/">M365 mail-settings fix</a> is the other half of the prevention side.</p>
+<h2>What "hardened" looks like before you pay us</h2>
+<ul>
+<li>Backups: offline or immutable copy, <strong>restore-tested</strong>, someone can name the last successful restore date.</li>
+<li>MFA on email, VPN, and anything admin — Microsoft's own security-defaults page states more than 99.9% of common identity attacks are stopped by MFA plus blocking legacy authentication.</li>
+<li>Mail tenant configured, not defaulted (<a href="/m365-default-settings-mail-doors/">see the defaults post</a>).</li>
+<li>Device passwords changed and update periods tracked (<a href="/psti-default-passwords-small-business/">the audit list</a>).</li>
+<li>An incident plan with one page and a phone number on it — because the first hour of a breach is decisions, not IT.</li>
+</ul>
+<p>We quote cyber work per business — there's no flat card price, because a two-person practice and a fifty-seat manufacturer are not the same engagement.</p>
+<p><strong>Want your own breach maths done properly? <a href="https://apxdigital.io/cyber">apxdigital.io/cyber</a></strong></p>
+<p>Info@apxdigital.io · 07753 226214 · Birmingham / Coventry / West Midlands</p>
+  <div class="cta">
+    <p style="margin-bottom:16px;font-size:14px;">Need a straight answer on this for your business?</p>
+    <a href="https://apxdigital.io/websites">Talk to APX Digital</a>
+  </div>
+</main>
+<footer>
+  <div>APX Digital — Cybersecurity briefs</div>
+  <div><a href="https://apxdigital.io">apxdigital.io</a> · <a href="mailto:Info@apxdigital.io">Info@apxdigital.io</a></div>
+</footer>
+</body>
+</html>

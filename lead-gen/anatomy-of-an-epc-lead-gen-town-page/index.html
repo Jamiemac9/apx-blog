@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<title>Anatomy of an EPC Lead-Gen Town Page That Doesn&#x27;t Read Like Spam</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A real EPC lead-gen build inspected line by line: how six town pages template, what genuinely varies, and where Google&#x27;s doorway-abuse line sits.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://blog.apxdigital.io/lead-gen/anatomy-of-an-epc-lead-gen-town-page/">
+<meta property="og:title" content="Anatomy of an EPC Lead-Gen Town Page">
+<meta property="og:description" content="Six real town pages, inspected from the build folder. What varies, what&#x27;s stale, and where Google draws the doorway line.">
+<meta property="og:image" content="https://blog.apxdigital.io/lead-gen/anatomy-of-an-epc-lead-gen-town-page/og-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://blog.apxdigital.io/lead-gen/anatomy-of-an-epc-lead-gen-town-page/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="APX Digital">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anatomy of an EPC Lead-Gen Town Page">
+<meta name="twitter:description" content="Six real town pages, inspected from the build folder. What varies, what&#x27;s stale, and where Google draws the doorway line.">
+<meta name="twitter:image" content="https://blog.apxdigital.io/lead-gen/anatomy-of-an-epc-lead-gen-town-page/og-1200x630.png">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Anatomy of an EPC Lead-Gen Town Page That Doesn't Read Like Spam",
+    "description": "A real EPC lead-gen build inspected line by line: how six town pages template, what genuinely varies, and where Google's doorway-abuse line sits.",
+    "inLanguage": "en-GB",
+    "author": {
+      "@type": "Organization",
+      "name": "APX Digital",
+      "url": "https://apxdigital.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "APX Digital",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://blog.apxdigital.io/lead-gen/anatomy-of-an-epc-lead-gen-town-page/og-1200x630.png"
+      }
+    },
+    "datePublished": "2026-09-03",
+    "image": "https://blog.apxdigital.io/lead-gen/anatomy-of-an-epc-lead-gen-town-page/og-1200x630.png",
+    "mainEntityOfPage": "https://blog.apxdigital.io/lead-gen/anatomy-of-an-epc-lead-gen-town-page/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://apxdigital.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://blog.apxdigital.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Lead Generation",
+        "item": "https://blog.apxdigital.io/lead-gen/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Anatomy of an EPC Lead-Gen Town Page",
+        "item": "https://blog.apxdigital.io/lead-gen/anatomy-of-an-epc-lead-gen-town-page/"
+      }
+    ]
+  }
+]
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root { --acid:#7FEE64; --ink:#0A0A0A; --paper:#F7F7F5; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--paper); color:var(--ink); font-family:'Space Mono',ui-monospace,monospace; line-height:1.7; -webkit-font-smoothing:antialiased; }
+  header { border-bottom:2px solid var(--ink); padding:22px 40px; display:flex; justify-content:space-between; align-items:center; }
+  .brand { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:.02em; font-size:20px; }
+  .brand .accent { color:var(--acid); }
+  nav a { color:var(--ink); text-decoration:none; font-size:12px; text-transform:uppercase; letter-spacing:.15em; margin-left:24px; }
+  nav a:hover { border-bottom:2px solid var(--acid); }
+  main { max-width:780px; margin:0 auto; padding:56px 40px 80px; }
+  .crumb { font-size:12px; letter-spacing:.15em; text-transform:uppercase; color:#555; margin-bottom:24px; }
+  .crumb a { color:#555; }
+  h1 { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; font-size:38px; line-height:1.1; letter-spacing:.01em; margin-bottom:16px; }
+  .meta { font-size:13px; color:#555; margin-bottom:40px; padding-bottom:24px; border-bottom:2px solid var(--ink); }
+  h2 { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; font-size:20px; margin:44px 0 14px; letter-spacing:.01em; }
+  h3 { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; font-size:15px; margin:32px 0 10px; }
+  p { margin-bottom:18px; }
+  a { color:var(--ink); text-decoration:underline; text-underline-offset:3px; }
+  a:hover { color:var(--acid); }
+  ul, ol { margin:0 0 18px 22px; }
+  li { margin-bottom:8px; }
+  strong { font-weight:700; }
+  .tablewrap { overflow-x:auto; margin:24px 0; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th, td { border:1px solid #ccc; padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--ink); color:var(--acid); font-family:'Archivo',sans-serif; text-transform:uppercase; font-size:12px; letter-spacing:.08em; }
+  code { background:#eee; padding:1px 5px; font-size:.9em; }
+  .cta { margin-top:48px; border-top:2px solid var(--ink); padding-top:28px; text-align:center; }
+  .cta a { display:inline-block; background:var(--ink); color:var(--acid); font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; text-decoration:none; padding:16px 34px; font-size:14px; letter-spacing:.08em; }
+  .cta a:hover { background:var(--acid); color:var(--ink); }
+  footer { border-top:2px solid var(--ink); padding:22px 40px; font-size:12px; color:#555; display:flex; justify-content:space-between; }
+  footer a { color:#555; }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="/" style="text-decoration:none;color:var(--ink)">APX<span class="accent">.</span></a></div>
+  <nav>
+    <a href="/">Blog</a>
+    <a href="https://apxdigital.io/websites">Services</a>
+    <a href="https://apxdigital.io">Site</a>
+  </nav>
+</header>
+<main>
+  <div class="crumb"><a href="/">Blog</a> / <a href="/lead-gen/">Lead Generation</a> / <span>Anatomy of an EPC Lead-Gen Town Page That Doesn&#x27;t Read Like Spam</span></div>
+  <h1>Anatomy of an EPC Lead-Gen Town Page That Doesn&#x27;t Read Like Spam</h1>
+  <div class="meta">Published 03 September 2026 &nbsp;·&nbsp; APX Digital</div>
+  <h1>Anatomy of an EPC lead-gen town page that doesn't read like spam</h1>
+<p>Programmatic location pages have a reputation problem. Generate a few hundred "boiler grants in [town]" pages from one template and you're most of the way to what Google calls doorway abuse. But a West Midlands EPC and retrofit lead-gen site has a legitimate reason to have a Birmingham page and a Dudley page — the funding routes, the housing stock and the council differ. The difference between "useful local page" and "spam" is not whether you template; it's what the template varies and what the data layer actually contains.</p>
+<p>This is an anatomy of a real build, measured from the build folder on 3 September 2026, with Google's own policy text held against it.</p>
+<h2>What sits in the repo</h2>
+<p>The site lives at <code>/Users/jamiemac/Projects/epcleadgen</code>. Five files matter:</p>
+<ul>
+<li><code>generate-locations.js</code> (12,820 bytes) — the generator: one template function plus a data array of six towns (Birmingham, Solihull, Coventry, Wolverhampton, Dudley, Walsall).</li>
+<li><code>locations/<slug>/index.html</code> — six generated pages, between 9,593 and 14,606 bytes each.</li>
+<li><code>index.html</code> (25,714 bytes) — the hub: a four-step eligibility calculator that all town pages funnel into.</li>
+<li><code>worker.js</code> — a Cloudflare Worker that receives the lead POST, rejects it if name, phone or postcode is missing, and emails the full lead record (income, property type, source page, timestamp) to the assessor.</li>
+<li><code>sitemap.xml</code> and `robots.txt` — discovery plumbing.</li>
+</ul>
+<p>Running a line diff between the Birmingham and Solihull pages returns 54 differing lines out of 155. They are unmistakably the same template. The question is whether that's a problem — more on that below.</p>
+<h2>The data layer is the product</h2>
+<p>Each town is a record with seven fields: <code>city</code>, `slug`, `county`, `postcodes`, `population`, `localAuthority`, `specificText`. The last one is doing the heavy lifting. Birmingham's text says the city has some of the oldest housing stock in the West Midlands, Victorian terraces and post-war estates qualifying under ECO4, and WMCA retrofit accelerator priority. Solihull's is about older semis in Shirley and Olton with cavity-wall grants combined with boiler upgrades. Coventry's is about post-war council housing and LA Flex nominations. None of it is interchangeable.</p>
+<p>The postcode list varies too: Birmingham carries 39 area codes (B1 through B48), Solihull five (B90–B94). Those aren't SEO decoration — they answer the actual question a searcher from that town has: <em>do you cover me?</em></p>
+<div class="tablewrap">
+<table><tr><th>Page element</th><th>What varies per town</th><th>Where it comes from</th></tr><tr><td>Title + meta description</td><td>City name, first postcode district</td><td>Template + <code>city</code>, `postcodes`</td></tr><tr><td>LocalBusiness JSON-LD</td><td><code>areaServed</code> City, address locality, serviceType</td><td><code>city</code>, `county`</td></tr><tr><td>Funding intro paragraph</td><td>Housing stock, scheme priority, grants</td><td><code>specificText</code></td></tr><tr><td>Postcode chips</td><td>5 to 39 area codes</td><td><code>postcodes</code></td></tr><tr><td>"How it works" steps</td><td>Council named in the application step</td><td><code>localAuthority</code></td></tr><tr><td>"About" section</td><td>Population figure, WMCA partnership line</td><td><code>population</code>, `localAuthority`</td></tr><tr><td>Footer disclaimer</td><td>"Not affiliated with [council]"</td><td><code>localAuthority</code></td></tr><tr><td>Conversion tracking</td><td><code>event_label</code> per slug on every click</td><td><code>slug</code></td></tr></table></div>
+<p>Every CTA carries a per-town analytics label (<code>phone_click</code> tagged `header-coventry`), so the site owner can see which town page actually produces calls. That is a measurable performance difference, not a vibe.</p>
+<h2>What Google actually says</h2>
+<p>From the <a href="https://developers.google.com/search/docs/essentials/spam-policies">Spam policies for Google web search</a> page, fetched 3 September 2026, doorway abuse includes: "Having multiple domain names or pages targeted at specific regions or cities that funnel users to one page" and "Creating substantially similar pages that are closer to search results than a clearly defined, browseable hierarchy." The scaled content abuse policy covers "many pages generated for the primary purpose of manipulating search rankings and not helping users", explicitly including pages made with generative AI tools "without adding value for users". Google's <a href="https://developers.google.com/search/blog/2024/03/core-update-spam-policies">March 2024 announcement</a> strengthened that policy to apply "whether automation or humans are involved" — templating your way to a thousand pages no longer hides behind "a person wrote the template once".</p>
+<p>So six town pages, genuinely varied, in a browseable hierarchy from a real hub, with a working tool behind them, sit on the right side of that line. Three hundred postcode-district pages with one swapped noun would not. The line isn't page count; it's whether each page could stand alone as an answer for someone in that town.</p>
+<h2>The honest weak points</h2>
+<p>The same inspection shows where this build is still exposed. The Google reviews badge and the 4.9 rating with 47 reviews are hardcoded into the template — identical on every town page, which fails the "does this page know something the other one doesn't" test. The hub carries an urgency banner reading "ECO4 funding closes March 2026" and Coventry's text promises "LA Flex nominations are available for 2025"; both are stale as of today and a visitor who checks will notice. <code>sitemap.xml</code> lists only the root URL, so the six location pages are discovered solely through links. None of these are fatal, but each is exactly the kind of seam a manual reviewer looks for. Scheme copy on a lead-gen site needs a refresh date the way milk does.</p>
+<h2>The checklist we run before shipping a location page</h2>
+<ul>
+<li>Does the page state something true about <em>this</em> town that would be false next door?</li>
+<li>Does it answer the local-intent question (coverage: postcode chips; cost: the calculator)?</li>
+<li>Is it reachable from a real hub with a browseable hierarchy, not just the sitemap?</li>
+<li>Is every trust element (reviews, ratings, schemes) live and per-location honest?</li>
+<li>Does every date-bound claim have someone responsible for updating it?</li>
+<li>Does the conversion path actually work end to end — form, worker, email, phone?</li>
+</ul>
+<p>If the answer to the first bullet is no, you are building a doorway page with better CSS. The fix is rarely a rewrite — it's more real data in the record, which is what the rest of this site's funnel exists to collect.</p>
+<p>Related: <a href="/lead-gen/why-a-calculator-qualifies-better-than-a-contact-form/">why a calculator pre-qualifies better than a contact form</a> — the hub this build funnels into — and <a href="/lead-gen/rented-lead-gen-sites-one-business-per-area/">how the rented lead-gen model works</a>. For the service this anatomy belongs to, see <a href="https://apxdigital.io/lead-generation">APX lead generation</a> and <a href="https://apxdigital.io/seo">SEO</a>.</p>
+<p>---</p>
+<p><strong>Want location pages that pass the smell test?</strong> APX builds and maintains EPC and retrofit lead-gen sites for West Midlands trades — one business per area, real data in every page. Email Info@apxdigital.io or call 07753 226214. <a href="https://apxdigital.io/lead-generation">Start with the lead-gen service page →</a></p>
+  <div class="cta">
+    <p style="margin-bottom:16px;font-size:14px;">Need a straight answer on this for your business?</p>
+    <a href="https://apxdigital.io/websites">Talk to APX Digital</a>
+  </div>
+</main>
+<footer>
+  <div>APX Digital — Lead Generation briefs</div>
+  <div><a href="https://apxdigital.io">apxdigital.io</a> · <a href="mailto:Info@apxdigital.io">Info@apxdigital.io</a></div>
+</footer>
+</body>
+</html>

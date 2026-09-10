@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<title>What to demand before an agent touches your inbox or ad accounts | APX Digital</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Let AI agents near your inbox or ad accounts only after a 10-point check: least privilege, gated credentials, staging, kill-switch, audit log.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://blog.apxdigital.io/agentic-ai/what-to-demand-before-an-agent-touches-your-inbox/">
+<meta property="og:title" content="What to demand before an agent touches your inbox">
+<meta property="og:description" content="Permissions, staging, kill-switch: the ten-point checklist any small business should run past an AI supplier — from the fences in APX&#x27;s own pipeline.">
+<meta property="og:image" content="https://blog.apxdigital.io/agentic-ai/what-to-demand-before-an-agent-touches-your-inbox/og-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://blog.apxdigital.io/agentic-ai/what-to-demand-before-an-agent-touches-your-inbox/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="APX Digital">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What to demand before an agent touches your inbox">
+<meta name="twitter:description" content="Ten yeses before any agent gets near your email, ad accounts or payments. Every fence is one we built around our own pipeline first.">
+<meta name="twitter:image" content="https://blog.apxdigital.io/agentic-ai/what-to-demand-before-an-agent-touches-your-inbox/og-1200x630.png">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What to demand before you let an agent touch your inbox or ad accounts",
+    "description": "A 10-point checklist for letting AI agents near business email, ad accounts or payments: least privilege, Keychain-gated credentials, staging, kill-switch, audit log.",
+    "inLanguage": "en-GB",
+    "datePublished": "2026-09-03",
+    "image": "https://blog.apxdigital.io/agentic-ai/what-to-demand-before-an-agent-touches-your-inbox/og-1200x630.png",
+    "author": {
+      "@type": "Organization",
+      "name": "APX Digital",
+      "url": "https://apxdigital.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "APX Digital",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://apxdigital.io/favicon"
+      }
+    },
+    "mainEntityOfPage": "https://blog.apxdigital.io/agentic-ai/what-to-demand-before-an-agent-touches-your-inbox/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "APX Digital",
+        "item": "https://apxdigital.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://blog.apxdigital.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Agentic AI",
+        "item": "https://blog.apxdigital.io/agentic-ai/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "What to demand before an agent touches your inbox"
+      }
+    ]
+  }
+]
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root { --acid:#7FEE64; --ink:#0A0A0A; --paper:#F7F7F5; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--paper); color:var(--ink); font-family:'Space Mono',ui-monospace,monospace; line-height:1.7; -webkit-font-smoothing:antialiased; }
+  header { border-bottom:2px solid var(--ink); padding:22px 40px; display:flex; justify-content:space-between; align-items:center; }
+  .brand { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:.02em; font-size:20px; }
+  .brand .accent { color:var(--acid); }
+  nav a { color:var(--ink); text-decoration:none; font-size:12px; text-transform:uppercase; letter-spacing:.15em; margin-left:24px; }
+  nav a:hover { border-bottom:2px solid var(--acid); }
+  main { max-width:780px; margin:0 auto; padding:56px 40px 80px; }
+  .crumb { font-size:12px; letter-spacing:.15em; text-transform:uppercase; color:#555; margin-bottom:24px; }
+  .crumb a { color:#555; }
+  h1 { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; font-size:38px; line-height:1.1; letter-spacing:.01em; margin-bottom:16px; }
+  .meta { font-size:13px; color:#555; margin-bottom:40px; padding-bottom:24px; border-bottom:2px solid var(--ink); }
+  h2 { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; font-size:20px; margin:44px 0 14px; letter-spacing:.01em; }
+  h3 { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; font-size:15px; margin:32px 0 10px; }
+  p { margin-bottom:18px; }
+  a { color:var(--ink); text-decoration:underline; text-underline-offset:3px; }
+  a:hover { color:var(--acid); }
+  ul, ol { margin:0 0 18px 22px; }
+  li { margin-bottom:8px; }
+  strong { font-weight:700; }
+  .tablewrap { overflow-x:auto; margin:24px 0; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th, td { border:1px solid #ccc; padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--ink); color:var(--acid); font-family:'Archivo',sans-serif; text-transform:uppercase; font-size:12px; letter-spacing:.08em; }
+  code { background:#eee; padding:1px 5px; font-size:.9em; }
+  .cta { margin-top:48px; border-top:2px solid var(--ink); padding-top:28px; text-align:center; }
+  .cta a { display:inline-block; background:var(--ink); color:var(--acid); font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; text-decoration:none; padding:16px 34px; font-size:14px; letter-spacing:.08em; }
+  .cta a:hover { background:var(--acid); color:var(--ink); }
+  footer { border-top:2px solid var(--ink); padding:22px 40px; font-size:12px; color:#555; display:flex; justify-content:space-between; }
+  footer a { color:#555; }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="/" style="text-decoration:none;color:var(--ink)">APX<span class="accent">.</span></a></div>
+  <nav>
+    <a href="/">Blog</a>
+    <a href="https://apxdigital.io/websites">Services</a>
+    <a href="https://apxdigital.io">Site</a>
+  </nav>
+</header>
+<main>
+  <div class="crumb"><a href="/">Blog</a> / <a href="/agentic-ai/">Agentic & AI</a> / <span>What to demand before an agent touches your inbox or ad accounts | APX Digital</span></div>
+  <h1>What to demand before an agent touches your inbox or ad accounts | APX Digital</h1>
+  <div class="meta">Published 03 September 2026 &nbsp;·&nbsp; APX Digital</div>
+  <h1>What to demand before an agent touches your inbox or ad accounts</h1>
+<p>An agent that only drafts is a toy. An agent that can send email, move money or run ad spend is an employee with keys to the shop — and you would not hire an employee without a contract, a limited access list and a way to sack them on a Tuesday afternoon. We run agents on our own marketing daily (the full walkthrough is <a href="/agentic-ai/inside-the-agent-pipeline-that-runs-our-marketing/">here</a>), so this list is not theory: every item is a fence we built for ourselves before anything went near a live account.</p>
+<p>Work down it with your supplier on the call. Ten yeses means you can start. Anywhere below eight, you are buying risk with extra steps.</p>
+<h2>The ten demands</h2>
+<ol>
+<li><strong>Least privilege, in writing, per system.</strong> The agent gets the narrowest permission that does the job: inbox read-and-draft, not send-as-you. On an ad account, the Advertiser role (create and edit ads) — never Admin, which per Meta's own role table can change the payment method and add or remove other people's access. The UK National Cyber Security Centre's 10 Steps guidance tells organisations to use full-privilege accounts "only when absolutely necessary" and to review access regularly, revoking privileges when no longer required — a rule written for human admins that fits agents even better, since they never get bored and share passwords. Ask the supplier to name exactly which scopes the agent holds on each of your systems.</li>
+<li><strong>Credentials the agent can use but never read.</strong> In our pipeline, the push scripts fetch the page token from the macOS Keychain at run time. The agent's only path to Facebook is a script that already holds the key. It cannot print, copy, or leak a secret it was never given. "I put the API key in the prompt" is how accounts get burned.</li>
+<li><strong>A staging area, default-on.</strong> Nothing the agent writes goes live until it has sat somewhere reversible first — a drafts folder, a review queue. Our pipeline cannot post at all unless the output has passed through a dated draft directory with a manifest. If a system has no staging mode, it is not production-grade.</li>
+<li><strong>A kill-switch a human can pull in under a minute.</strong> Not "contact support for deactivation". Revoke the token, flip the config field, close the app. Ours is partly the credential itself: with no page ID and no Keychain token, the pipeline runs and publishes nothing. Demand a switch you control, and test it before go-live, while you're calm.</li>
+<li><strong>A named human on the loop — and a job description for the loop.</strong> Someone reads what the agent reports, not just what it posts. Our agent writes a five-line brief to the owner every day: what ran, what failed, what it needs from him. Ask what the agent will report to <em>you</em>, how often, and what happens when nobody reads it (correct answer: publishing stops, it doesn't proceed anyway).</li>
+<li><strong>A QA gate that can fail the work.</strong> Our renders go back to a QA step that can reject them, twice, before a fallback kicks in and says so. An agent that grades its own homework with a rubber stamp is decorating the risk. Ask what the automated check actually tests, and what happened the last time it failed something.</li>
+<li><strong>A log with dates you can audit.</strong> Every run appends a machine-readable line: entry used, assets, QA result, published status. "It should've done about six posts last month" is not a reporting standard. If the supplier can't show you their own history file, they don't have one.</li>
+<li><strong>Explicit "never" rules in the contract.</strong> Our playbook bans invented claims and competitor-bashing copy outright — and, pointedly, auto-publishing until credentials are deliberately added. Write down the actions the agent must never take unilaterally: refunds, cancellations, price quotes, statements of legal fact, spending above zero.</li>
+<li><strong>A test path before the live path.</strong> Sandboxes, staging ad accounts, a dummy inbox. Our blog pipeline's publishing posture is the same lesson: it has run against the real repo with the real design system, and the last mile stays manually wired shut. Ask to watch the agent fail safely before you watch it succeed on live data.</li>
+<li><strong>A security framework named, not waved at.</strong> OWASP's Top 10 for Agentic Applications 2026 spends its list on things like goal hijack (ASI01) and identity and privilege abuse (ASI03) — which is a plain-language way of saying: the content your agent reads can attack it, and its permissions are the blast radius. A supplier who has read <em>something</em> recent can tell you which of those risks their design addresses and which they're accepting on your behalf.</li>
+</ol>
+<h2>Two questions that sort the industry instantly</h2>
+<p>"What can the agent <em>not</em> do on day one?" A serious builder answers fast — the list is the specification. And: "Show me your own kill-switch." We answered that one with file paths.</p>
+<p>Then the commercial fence, same as any supplier: fixed scope, deposit-and-balance terms, and an offboarding clause that says who keeps the configs, the logs and the credentials when you leave. If the agent runs your inbox, its accounts are <em>yours</em> — get that in writing before anyone types a password.</p>
+<p>The background on what actually counts as an agentic system — versus a chatbot with a press release — is in <a href="/agentic-ai/what-an-agentic-system-is-for-a-small-business/">What an agentic system is (and is not)</a>.</p>
+<p>---</p>
+<p><strong>Getting an agent near your accounts?</strong> That's the point where a boring, auditable build beats a slick demo. APX: chatbots from £397 (Basic; Advanced £797, Enterprise £1,497, support from £50/mo — <a href="https://apxdigital.io/ai-chatbots">apxdigital.io/ai-chatbots</a>); agentic systems quoted on scope. Info@apxdigital.io · 07753 226214 · Birmingham / Coventry / West Midlands.</p>
+  <div class="cta">
+    <p style="margin-bottom:16px;font-size:14px;">Need a straight answer on this for your business?</p>
+    <a href="https://apxdigital.io/websites">Talk to APX Digital</a>
+  </div>
+</main>
+<footer>
+  <div>APX Digital — Agentic &amp; AI briefs</div>
+  <div><a href="https://apxdigital.io">apxdigital.io</a> · <a href="mailto:Info@apxdigital.io">Info@apxdigital.io</a></div>
+</footer>
+</body>
+</html>
