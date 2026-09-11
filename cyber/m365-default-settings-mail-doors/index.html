@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<title>Microsoft 365 Default Settings: The Mail Doors SMEs Leave Open | APX Digital</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Phishing is the UK&#x27;s most disruptive SME attack. Safe Links licensing, security defaults, SMTP AUTH: four M365 settings from Microsoft&#x27;s own docs.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://blog.apxdigital.io/cyber/m365-default-settings-mail-doors/">
+<meta property="og:title" content="Phishing still wins. Your M365 defaults are why.">
+<meta property="og:description" content="38% of UK businesses took phishing attacks; 69% called them most disruptive. Four Microsoft 365 default-settings gaps, straight from Microsoft&#x27;s docs.">
+<meta property="og:image" content="https://blog.apxdigital.io/cyber/m365-default-settings-mail-doors/og-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://blog.apxdigital.io/cyber/m365-default-settings-mail-doors/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="APX Digital">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Phishing still wins. Your M365 defaults are why.">
+<meta name="twitter:description" content="38% of UK businesses took phishing attacks; 69% called them most disruptive. Four Microsoft 365 default-settings gaps, straight from Microsoft&#x27;s docs.">
+<meta name="twitter:image" content="https://blog.apxdigital.io/cyber/m365-default-settings-mail-doors/og-1200x630.png">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Microsoft 365 Default Settings: The Mail Doors SMEs Leave Open",
+    "description": "Phishing is the UK's most disruptive SME attack. Safe Links licensing, security defaults, SMTP AUTH: four M365 settings from Microsoft's own docs.",
+    "inLanguage": "en-GB",
+    "author": {
+      "@type": "Organization",
+      "name": "APX Digital",
+      "url": "https://apxdigital.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "APX Digital",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://apxdigital.io/favicon.ico"
+      }
+    },
+    "datePublished": "2026-09-03",
+    "image": "https://blog.apxdigital.io/cyber/m365-default-settings-mail-doors/og-1200x630.png",
+    "mainEntityOfPage": "https://blog.apxdigital.io/cyber/m365-default-settings-mail-doors/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://apxdigital.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://blog.apxdigital.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Cyber",
+        "item": "https://blog.apxdigital.io/cyber/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Microsoft 365 Default Settings: The Mail Doors SMEs Leave Open"
+      }
+    ]
+  }
+]
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root { --acid:#7FEE64; --ink:#0A0A0A; --paper:#F7F7F5; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--paper); color:var(--ink); font-family:'Space Mono',ui-monospace,monospace; line-height:1.7; -webkit-font-smoothing:antialiased; }
+  header { border-bottom:2px solid var(--ink); padding:22px 40px; display:flex; justify-content:space-between; align-items:center; }
+  .brand { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:.02em; font-size:20px; }
+  .brand .accent { color:var(--acid); }
+  nav a { color:var(--ink); text-decoration:none; font-size:12px; text-transform:uppercase; letter-spacing:.15em; margin-left:24px; }
+  nav a:hover { border-bottom:2px solid var(--acid); }
+  main { max-width:780px; margin:0 auto; padding:56px 40px 80px; }
+  .crumb { font-size:12px; letter-spacing:.15em; text-transform:uppercase; color:#555; margin-bottom:24px; }
+  .crumb a { color:#555; }
+  h1 { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; font-size:38px; line-height:1.1; letter-spacing:.01em; margin-bottom:16px; }
+  .meta { font-size:13px; color:#555; margin-bottom:40px; padding-bottom:24px; border-bottom:2px solid var(--ink); }
+  h2 { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; font-size:20px; margin:44px 0 14px; letter-spacing:.01em; }
+  h3 { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; font-size:15px; margin:32px 0 10px; }
+  p { margin-bottom:18px; }
+  a { color:var(--ink); text-decoration:underline; text-underline-offset:3px; }
+  a:hover { color:var(--acid); }
+  ul, ol { margin:0 0 18px 22px; }
+  li { margin-bottom:8px; }
+  strong { font-weight:700; }
+  .tablewrap { overflow-x:auto; margin:24px 0; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th, td { border:1px solid #ccc; padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--ink); color:var(--acid); font-family:'Archivo',sans-serif; text-transform:uppercase; font-size:12px; letter-spacing:.08em; }
+  code { background:#eee; padding:1px 5px; font-size:.9em; }
+  .cta { margin-top:48px; border-top:2px solid var(--ink); padding-top:28px; text-align:center; }
+  .cta a { display:inline-block; background:var(--ink); color:var(--acid); font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; text-decoration:none; padding:16px 34px; font-size:14px; letter-spacing:.08em; }
+  .cta a:hover { background:var(--acid); color:var(--ink); }
+  footer { border-top:2px solid var(--ink); padding:22px 40px; font-size:12px; color:#555; display:flex; justify-content:space-between; }
+  footer a { color:#555; }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="/" style="text-decoration:none;color:var(--ink)">APX<span class="accent">.</span></a></div>
+  <nav>
+    <a href="/">Blog</a>
+    <a href="https://apxdigital.io/websites">Services</a>
+    <a href="https://apxdigital.io">Site</a>
+  </nav>
+</header>
+<main>
+  <div class="crumb"><a href="/">Blog</a> / <a href="/cyber/">Cybersecurity</a> / <span>Microsoft 365 Default Settings: The Mail Doors SMEs Leave Open | APX Digital</span></div>
+  <h1>Microsoft 365 Default Settings: The Mail Doors SMEs Leave Open | APX Digital</h1>
+  <div class="meta">Published 03 September 2026 &nbsp;·&nbsp; APX Digital</div>
+  <h1>38% of UK businesses took a phishing attack last year, and 69% of those that were breached called it their most disruptive. Most of them were running Microsoft 365 with the settings Microsoft shipped. Here are the four defaults that leave the door open.</h1>
+<p><strong>What actually ships on in a small-business Microsoft 365 tenant, straight from Microsoft's own documentation.</strong></p>
+<p>As of September 2026, phishing remains the most prevalent attack on UK businesses by a wide margin — <strong>38% of businesses</strong> experienced phishing attacks in the last 12 months, and among businesses that were breached, <strong>69% named phishing as the most disruptive</strong> type (<a href="https://www.gov.uk/government/statistics/cyber-security-breaches-survey-20252026/cyber-security-breaches-survey-20252026">Cyber Security Breaches Survey 2025/2026</a>, gov.uk). Impersonation of your finance director's signature is not exotic; it's Tuesday.</p>
+<p>The uncomfortable part: Microsoft's defaults are genuinely better than they were, and they're still not enough for a tenant nobody administers. Four things we find on almost every small-business tenant we review — every claim below sourced from Microsoft's own docs this month.</p>
+<h2>1. Safe Links and Safe Attachments are licence-gated, and most SMEs don't have them</h2>
+<p>The link-scanning and attachment-detonation features people assume are "just Microsoft 365" are <strong>Defender for Office 365</strong> features. <a href="https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-advanced-threat-protection-service-description">Microsoft's service description</a> is explicit: Defender for Office 365 Plan 1 (Safe Links, Safe Attachments, anti-phishing policy, real-time detections) is included in <strong>Microsoft 365 Business Premium</strong> — and, effective 1 July 2026, in Office 365 E3 / Microsoft 365 E3. On Business Standard (the most popular SME seat), you get the baseline Exchange Online Protection: spam and malware filtering, but <strong>no Safe Links time-of-click protection and no Safe Attachments detonation</strong>. Microsoft's <a href="https://learn.microsoft.com/en-us/defender-office-365/safe-attachments-about">Safe Attachments documentation</a> also notes there is <em>no default Safe Attachments policy</em> even once you hold the licence — protection only exists if someone configures it.</p>
+<p>So on a Standard tenant: a malicious link clicked on Friday is re-checked never, and a new-variant attachment is only caught if signature/behavioural anti-malware happens to know it already.</p>
+<h2>2. Security defaults help — unless someone turned them off in 2020</h2>
+<p>Microsoft's <a href="https://learn.microsoft.com/en-us/entra/fundamentals/security-defaults">security defaults</a> require MFA registration for all users and block legacy authentication; Microsoft states more than <strong>99.9% of common identity attacks</strong> (password spray, replay, phishing-driven) are stopped by MFA plus legacy-auth blocking. New tenants get them rolled out at creation, with a 24-hour grace period. The two leaks: tenants created before the rollout often have them disabled because one scanned copier couldn't do MFA, and tenants with Entra ID P1 licences (Business Premium) frequently have security defaults <em>off</em> in favour of Conditional Access that was never actually configured. Off is not a neutral state.</p>
+<h2>3. SMTP AUTH stays on for the scanner</h2>
+<p>Authenticated SMTP (port 587) is how multifunction printers, report servers and line-of-business apps send mail. Microsoft's <a href="https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission">SMTP AUTH documentation</a> says virtually all modern clients don't need it and recommends disabling it org-wide, enabling per-mailbox only where required. The scan-to-email box from 2018 has one exception account — and that account usually has a password that's never changed, no MFA (it can't do it), and lives in the same directory as your finance director.</p>
+<p>The clock is running on that setup, not just your diligence: Microsoft's updated deprecation timeline (<a href="https://techcommunity.microsoft.com/blog/exchange/updated-exchange-online-smtp-auth-basic-authentication-deprecation-timeline/4489835">Exchange Team, January 2026</a>) disables SMTP AUTH Basic Authentication <strong>by default for existing tenants from end of December 2026</strong>, and makes it unavailable by default for new tenants after that. Plan the scanner migration this quarter.</p>
+<h2>4. External-forwarding and auto-forward rules nobody wrote</h2>
+<p>Inbound phish, one inbox rule, your invoices quietly BCC'd to a Gmail address. Baseline tenants don't alert on this. A configured tenant with audit logging does.</p>
+<h2>The fix list, in order of pain-per-pound</h2>
+<ul>
+<li>[ ] Check your actual licences — Business Standard ≠ Defender protection. Costed honestly, moving key staff to Business Premium is usually cheaper than one breach in the £4,000–£12,500 tail our <a href="/small-business-breach-maths/">breach-maths post</a> quantifies.</li>
+<li>[ ] Turn security defaults <strong>on</strong>, or build Conditional Access properly. No half-state.</li>
+<li>[ ] Disable SMTP AUTH tenant-wide; re-enable per mailbox for exactly the devices that need it, and give the scanner an app-style credential you rotate.</li>
+<li>[ ] If licensed: enable Standard + Strict preset security policies and Safe Attachments for SharePoint/OneDrive/Teams.</li>
+<li>[ ] Alert on auto-forwarding rules and new transport rules.</li>
+</ul>
+<p>The rest of your attack surface is physical: the CCTV and router defaults are covered in <a href="/psti-default-passwords-small-business/">the PSTI password audit</a>.</p>
+<p><strong>We harden M365 tenants for SMEs — licence review, identity, mail flow, evidence it worked. <a href="https://apxdigital.io/cyber">apxdigital.io/cyber</a></strong> · General IT support: <a href="https://apxdigital.io/it-support">apxdigital.io/it-support</a></p>
+<p>Info@apxdigital.io · 07753 226214 · Birmingham / Coventry / West Midlands</p>
+  <div class="cta">
+    <p style="margin-bottom:16px;font-size:14px;">Need a straight answer on this for your business?</p>
+    <a href="https://apxdigital.io/websites">Talk to APX Digital</a>
+  </div>
+</main>
+<footer>
+  <div>APX Digital — Cybersecurity briefs</div>
+  <div><a href="https://apxdigital.io">apxdigital.io</a> · <a href="mailto:Info@apxdigital.io">Info@apxdigital.io</a></div>
+</footer>
+</body>
+</html>
