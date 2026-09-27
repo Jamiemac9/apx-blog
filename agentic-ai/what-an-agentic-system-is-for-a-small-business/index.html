@@ -186,43 +186,43 @@
   <h1>What an agentic system is (and what it is not) | APX Digital</h1>
   <div class="meta">Published 03 September 2026 &nbsp;·&nbsp; APX Digital</div>
   <h1>What an agentic system is (and what it is not)</h1>
-<p>An agentic system is software that takes a goal you state in plain language, works out the steps itself, uses real tools to carry them out — email, a browser, spreadsheets, an ad platform — and reports back to a human. That is the whole definition. Most small-business owners have only met two AI relatives: the chatbot, which answers, and the automation, which follows a script. The agent is the third thing: it decides the steps. And the word "decides" is precisely why it needs gates, which is what the rest of this post is about.</p>
+<p>An agentic system is software that takes a goal you state in plain language, works out the steps itself, uses real tools to carry them out (email, a browser, spreadsheets, an ad platform) and reports back to a human. That is the whole definition. Most small-business owners have only met two AI relatives: the chatbot, which answers, and the automation, which follows a script. The agent is the third thing: it decides the steps. And the word "decides" is precisely why it needs gates, which is what the rest of this post is about.</p>
 <h2>Where the confusion comes from</h2>
-<p>According to Office for National Statistics figures published on 20 July 2026, self-reported AI use in UK businesses with 10 or more employees has grown from around 12% in late 2023 to around 35%. Adoption is still shallow: the average using business runs only about 1.6 AI technologies, and most of what that 35% counts is text generation and chat interfaces — not agents doing work. So when a supplier says they sell "AI, like everyone's using", they probably do not mean agentic. And when they say they do, you are right to ask what it actually touches.</p>
+<p>According to Office for National Statistics figures published on 20 July 2026, self-reported AI use in UK businesses with 10 or more employees has grown from around 12% in late 2023 to around 35%. Adoption is still shallow: the average using business runs only about 1.6 AI technologies, and most of what that 35% counts is text generation and chat interfaces, not agents doing work. So when a supplier says they sell "AI, like everyone's using", they probably do not mean agentic. And when they say they do, you are right to ask what it actually touches.</p>
 <h2>Chatbot, automation, agent: the difference</h2>
 <div class="tablewrap">
-<table><tr><th></th><th>Chatbot</th><th>Traditional automation</th><th>Agentic system</th></tr><tr><td>What you give it</td><td>A question</td><td>A fixed rule ("when X, do Y")</td><td>A goal and a policy</td></tr><tr><td>What it does</td><td>Answers text</td><td>Runs the script unchanged</td><td>Works out the steps, runs them</td></tr><tr><td>Typical tools</td><td>A text box</td><td>One app's trigger list</td><td>Many: inbox, browser, files, APIs</td></tr><tr><td>When it fails</td><td>Says something wrong</td><td>Does nothing quietly</td><td>Can do many wrong things, confidently</td></tr><tr><td>Who must check it</td><td>The reader</td><td>You, weekly</td><td>A QA gate and a named human</td></tr></table></div>
-<p>Automation has no judgement; a chatbot has no hands. An agent has both — which is why everything below is about limits.</p>
+<table><tr><th></th><th>Chatbot</th><th>Traditional automation</th><th>Agentic system</th></tr><tr><td>What you give it</td><td>A question</td><td>A fixed rule ("when X, do Y")</td><td>A goal and a policy</td></tr><tr><td>What it does</td><td>Answers text</td><td>Runs the script unchanged</td><td>Works out the steps, runs them</td></tr><tr><td>Typical tools</td><td>A text box</td><td>One app's trigger list</td><td>Many: inbox, browser, files, APIs</td></tr><tr><td>When it fails</td><td>Says something wrong</td><td>Does nothing, says nothing</td><td>Can do many wrong things, confidently</td></tr><tr><td>Who must check it</td><td>The reader</td><td>You, weekly</td><td>A QA gate and a named human</td></tr></table></div>
+<p>Automation has no judgement; a chatbot has no hands. An agent has both, which is why everything below is about limits.</p>
 <h2>The three parts of every agentic system</h2>
 <ol>
 <li><strong>A brief and a policy.</strong> The goal, plus hard rules: what it must never do, what it must always stage first, and what gets escalated to a human.</li>
-<li><strong>Tools.</strong> The accounts, files and interfaces it is allowed to use — with credentials it can use but never see or copy.</li>
+<li><strong>Tools.</strong> The accounts, files and interfaces it is allowed to use, with credentials it can use but never see or copy.</li>
 <li><strong>Gates.</strong> A staging area, an approval step, a check that can fail its work, and a switch-off you can pull in seconds.</li>
 </ol>
 <p>Strip the gates out of any pitch and you have stripped out the product. A supplier who won't talk about gates is selling you a demo.</p>
 <h2>How a task actually runs</h2>
 <p>If you handed an agent a job, this is the shape of it:</p>
 <ol>
-<li>You state the outcome and the rules — "draft replies to every enquiry; anything mentioning refunds or lawyers goes to a human".</li>
+<li>You state the outcome and the rules: "draft replies to every enquiry; anything mentioning refunds or lawyers goes to a human".</li>
 <li>The agent reads the inputs, plans its steps, and calls the tools one at a time.</li>
-<li>It puts its output somewhere that is <strong>not</strong> live — a drafts folder, a review queue — along with evidence: a log, a screenshot, what it did and why.</li>
+<li>It puts its output somewhere that is <strong>not</strong> live (a drafts folder, a review queue), along with evidence: a log, a screenshot, what it did and why.</li>
 <li>A QA gate checks the output against the rules before anyone looks at it.</li>
 <li>Whatever passes waits for a human, until you deliberately widen its permissions in writing.</li>
 </ol>
-<p>That is not hypothetical. It describes our own daily marketing pipeline, which has been running with auto-publish switched off on purpose — we wrote about a real day inside it in <a href="/agentic-ai/inside-the-agent-pipeline-that-runs-our-marketing/">We run our own marketing on agents</a>.</p>
+<p>That is not hypothetical. It describes our own daily marketing pipeline, which has been running with auto-publish switched off on purpose; we wrote about a real day inside it in <a href="/agentic-ai/inside-the-agent-pipeline-that-runs-our-marketing/">We run our own marketing on agents</a>.</p>
 <h2>What an agentic system is not</h2>
 <ul>
 <li><strong>Not a person.</strong> It has no felt sense of being wrong. Measure it with logs and gates, not vibes.</li>
 <li><strong>Not "hands-off".</strong> Security bodies keep landing on the same warning. The OWASP Top 10 for Agentic Applications 2026 lists agent goal hijack and identity and privilege abuse among its headline risks precisely because agents hold real permissions. If a pitch includes the phrase "fully autonomous, no oversight needed", walk.</li>
 <li><strong>Not a replacement for your website, CRM or staff.</strong> It is a worker you configure, and the configuration is the product.</li>
-<li><strong>Not evenly adopted — which is the opportunity.</strong> The same ONS analysis puts AI use at 58% of information and communication businesses and 13% of construction. In a low-adoption trade the tool works just as well; you're just racing fewer people who bothered.</li>
-<li><strong>Not the government's problem to solve for you.</strong> The UK's AI Opportunities Action Plan reports 38 of 50 commitments met a year on, with compute capacity up tenfold from 2024 to 2025. None of that decides whether <em>your</em> agent gets a kill-switch. That decision stays yours — see <a href="/agentic-ai/what-to-demand-before-an-agent-touches-your-inbox/">What to demand before an agent touches your inbox</a>.</li>
+<li><strong>Not evenly adopted, which is the opportunity.</strong> The same ONS analysis puts AI use at 58% of information and communication businesses and 13% of construction. In a low-adoption trade the tool works just as well; you're just racing fewer people who bothered.</li>
+<li><strong>Not the government's problem to solve for you.</strong> The UK's AI Opportunities Action Plan reports 38 of 50 commitments met a year on, with compute capacity up tenfold from 2024 to 2025. None of that decides whether <em>your</em> agent gets a kill-switch. That decision stays yours; see <a href="/agentic-ai/what-to-demand-before-an-agent-touches-your-inbox/">What to demand before an agent touches your inbox</a>.</li>
 </ul>
 <h2>When should a small business actually care?</h2>
-<p>When you have a repeatable volume of decisions with a clear definition of "done": enquiry triage, lead follow-up, quote pre-assessments, tender monitoring, content production. If you could explain the task to a new temp on one page, you can probably hand it to an agent — with gates. If you can't explain it to a temp, no agent will do it either, whatever the demo suggests.</p>
+<p>When you have a repeatable volume of decisions with a clear definition of "done": enquiry triage, lead follow-up, quote pre-assessments, tender monitoring, content production. If you could explain the task to a new temp on one page, you can probably hand it to an agent, with gates. If you can't explain it to a temp, no agent will do it either, whatever the demo suggests.</p>
 <p>The two follow-ups in this series cover what the machinery looks like when we run it on ourselves, and the ten things to demand before any agent gets near your inbox.</p>
 <p>---</p>
-<p><strong>Talk to APX.</strong> We build and run agentic systems for small businesses — chatbots as the starting point: Basic £397 · Advanced £797 · Enterprise £1,497 one-time, support from £50/mo (<a href="https://apxdigital.io/ai-chatbots">apxdigital.io/ai-chatbots</a>). Custom agentic work is quoted on scope. Info@apxdigital.io · 07753 226214 · Birmingham / Coventry / West Midlands.</p>
+<p><strong>Talk to APX.</strong> We build and run agentic systems for small businesses, with chatbots as the starting point: Basic £397 · Advanced £797 · Enterprise £1,497 one-time, support from £50/mo (<a href="https://apxdigital.io/ai-chatbots">apxdigital.io/ai-chatbots</a>). Custom agentic work is quoted on scope. Info@apxdigital.io · 07753 226214 · Birmingham / Coventry / West Midlands.</p>
   <div class="cta">
     <p style="margin-bottom:16px;font-size:14px;">Need a straight answer on this for your business?</p>
     <a href="https://apxdigital.io/websites">Talk to APX Digital</a>

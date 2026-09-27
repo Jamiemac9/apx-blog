@@ -139,50 +139,50 @@
   <h1>Ex-Staff Are Still in Your SharePoint: the Offboarding Checklist</h1>
   <div class="meta">Published 03 September 2026 &nbsp;·&nbsp; APX Digital</div>
   <h1>Ex-staff are still in your SharePoint: the offboarding audit checklist</h1>
-<p>The scenario is almost universal in small firms. Someone left — amicably, usually, six or eight months ago. The laptop came back, the standing order got cancelled, the email forwarding was sorted. And somewhere in your Microsoft 365 tenant, their name is still on things: a Teams group where they're "still a member", a SharePoint folder they personally shared with a client, an Anyone-link to the payroll folder they made once because it was quicker than attaching.</p>
+<p>The scenario is almost universal in small firms. Someone left, amicably, usually, six or eight months ago. The laptop came back, the standing order got cancelled, the email forwarding was sorted. And somewhere in your Microsoft 365 tenant, their name is still on things: a Teams group where they're "still a member", a SharePoint folder they personally shared with a client, an Anyone-link to the payroll folder they made once because it was quicker than attaching.</p>
 <p>This is a checklist, not a lecture. Budget 60–90 minutes the first time. Every step is verified against Microsoft's own documentation, current as of 3 September 2026.</p>
 <h2>First: know what "gone" actually means</h2>
 <p>Three facts that change how you read this audit:</p>
 <ol>
 <li><strong>Disabling an account is not instant eviction.</strong> Entra access tokens last an hour by default; after you revoke, sessions die "when the access token expires", and apps that don't support continuous access evaluation can hold sessions longer (<a href="https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access">Microsoft Learn: Revoke user access in Microsoft Entra ID</a>, accessed 3 September 2026). Block sign-in <strong>and</strong> hit Revoke sessions.</li>
-<li><strong>Deleting a user starts a 30-day countdown.</strong> Their OneDrive and mailbox content is retained for 30 days, then deleted permanently (<a href="https://learn.microsoft.com/en-us/microsoft-365/admin/add-users/remove-former-employee">Overview: Remove a former employee</a>, accessed 3 September 2026). If you've already deleted them more than a month ago, that data is gone — and if they left <em>shared links</em> to it, those links now point at nothing, quietly, while copies live in the recipient's tenant.</li>
-<li><strong>SharePoint "Anyone" links don't know anyone left.</strong> Per Microsoft's external sharing overview, to stop sharing with anyone-link holders you must "go to the file or folder that you shared and delete the link" — removing the person from Entra does <strong>not</strong> kill links they created (<a href="https://learn.microsoft.com/en-us/sharepoint/external-sharing-overview">Overview of external sharing in SharePoint and OneDrive</a>, accessed 3 September 2026). And external sharing is <strong>on by default</strong> for the whole tenant.</li>
+<li><strong>Deleting a user starts a 30-day countdown.</strong> Their OneDrive and mailbox content is retained for 30 days, then deleted permanently (<a href="https://learn.microsoft.com/en-us/microsoft-365/admin/add-users/remove-former-employee">Overview: Remove a former employee</a>, accessed 3 September 2026). If you've already deleted them more than a month ago, that data is gone, and if they left <em>shared links</em> to it, those links now point at nothing while copies live in the recipient's tenant.</li>
+<li><strong>SharePoint "Anyone" links don't know anyone left.</strong> Per Microsoft's external sharing overview, to stop sharing with anyone-link holders you must "go to the file or folder that you shared and delete the link". Removing the person from Entra does <strong>not</strong> kill links they created (<a href="https://learn.microsoft.com/en-us/sharepoint/external-sharing-overview">Overview of external sharing in SharePoint and OneDrive</a>, accessed 3 September 2026). And external sharing is <strong>on by default</strong> for the whole tenant.</li>
 </ol>
 <h2>The checklist</h2>
 <p><strong>Identities</strong></p>
 <ul>
-<li>[ ] In the Microsoft 365 admin centre, review <strong>Users → Active users</strong> against your actual payroll. Every ex-employee still "Active" is a live credential — even one that "doesn't remember the password".</li>
+<li>[ ] In the Microsoft 365 admin centre, review <strong>Users → Active users</strong> against your actual payroll. Every ex-employee still "Active" is a live credential, even one that "doesn't remember the password".</li>
 <li>[ ] For anyone still needed for data: <strong>Block sign-in</strong>, then <strong>Revoke sessions</strong> in Entra (Entra admin centre → user's Overview page). Both, not either.</li>
 <li>[ ] Check for <strong>guest accounts</strong> (Entra → Users → External Identities → Guest users). A personal Outlook.com address you invited in 2023 is an ex-employee with a side door.</li>
 <li>[ ] Deleted-but-not-hard-deleted users: confirm the 30-day window and restore-then-save anything important before it purges.</li>
 </ul>
 <p><strong>Mail</strong></p>
 <ul>
-<li>[ ] Convert the leaver's mailbox to a <strong>shared mailbox</strong> — no licence needed up to 50 GB, so the seat frees up while client email keeps landing somewhere sane (Microsoft's step 4 in the <a href="https://learn.microsoft.com/en-us/microsoft-365/admin/add-users/remove-former-employee">remove-former-employee series</a>, 50 GB rule per the <a href="https://learn.microsoft.com/en-us/microsoft-365/admin/email/convert-user-mailbox-to-shared-mailbox">convert-a-user-mailbox doc</a>, accessed 3 September 2026) — or set <strong>email forwarding</strong> to whoever inherited the client.</li>
+<li>[ ] Convert the leaver's mailbox to a <strong>shared mailbox</strong>: no licence needed up to 50 GB, so the seat frees up while client email keeps landing somewhere sane (Microsoft's step 4 in the <a href="https://learn.microsoft.com/en-us/microsoft-365/admin/add-users/remove-former-employee">remove-former-employee series</a>, 50 GB rule per the <a href="https://learn.microsoft.com/en-us/microsoft-365/admin/email/convert-user-mailbox-to-shared-mailbox">convert-a-user-mailbox doc</a>, accessed 3 September 2026). Or set <strong>email forwarding</strong> to whoever inherited the client.</li>
 <li>[ ] Check <strong>mobile partnerships / devices</strong> for the old phone still receiving mail, and remove them (step 3 wipes or blocks devices where Intune manages them; where it doesn't, the best you can do is stop access).</li>
 <li>[ ] Calendar: cancel or reassign meetings in the old account's name so clients aren't meeting a ghost.</li>
 </ul>
-<p><strong>Files — the part people skip</strong></p>
+<p><strong>Files (the part people skip)</strong></p>
 <ul>
 <li>[ ] Their <strong>OneDrive</strong>: before deletion, create the "link to files" under the OneDrive tab in the admin centre and move what the firm needs into a proper SharePoint library (step 5). Files in a personal OneDrive are one resignation away from being someone's property.</li>
-<li>[ ] <strong>SharePoint site permissions</strong>: open each team site → Permissions → "All sharing" (or the Site permissions info panel). Look for the leaver's name and any external shares <em>they</em> made — these survive their deletion.</li>
+<li>[ ] <strong>SharePoint site permissions</strong>: open each team site → Permissions → "All sharing" (or the Site permissions info panel). Look for the leaver's name and any external shares <em>they</em> made. These survive their deletion.</li>
 <li>[ ] <strong>Link inventory on sensitive libraries</strong>: search for "Anyone" links on finance/HR document libraries and remove or expiry-set them.</li>
-<li>[ ] Teams: remove them from every <strong>team and channel</strong> (membership follows the Microsoft 365 group — removing the user from Entra doesn't always scrub chat history references, but it does end access).</li>
+<li>[ ] Teams: remove them from every <strong>team and channel</strong> (membership follows the Microsoft 365 group; removing the user from Entra doesn't always scrub chat history references, but it does end access).</li>
 </ul>
 <p><strong>Keys to the kingdom</strong></p>
 <ul>
-<li>[ ] Did they hold <strong>admin roles</strong>? Entra → User → Assigned roles. Global Administrator, User Administrator, SharePoint Administrator, Exchange Administrator — audit every account, not just leavers.</li>
+<li>[ ] Did they hold <strong>admin roles</strong>? Entra → User → Assigned roles. Global Administrator, User Administrator, SharePoint Administrator, Exchange Administrator. Audit every account, not just leavers.</li>
 <li>[ ] Search for <strong>Service Principals / app registrations</strong> they created (Entra → App registrations → owners). The integration they built for the 2024 quote tool dies silently with them unless ownership moves.</li>
 <li>[ ] Their <strong>MFA methods</strong> (phone, authenticator): a leaver's registered authenticator app on a phone they kept is still, technically, a factor. Reset registration with the account block.</li>
 <li>[ ] Password managers / shared browser profiles: anything with a saved Microsoft login on a machine you didn't reclaim.</li>
 </ul>
 <h2>How the other half lives: onboarding</h2>
-<p>The same tenant creates most of these messes by omission. A clean joiner process — named owner, MFA registered day one, standard groups, licence chosen on purpose (see <a href="/it/m365-five-person-firm-licence-stack/">the licence stack post</a>) — means the leaving process is a checklist instead of an archaeology dig.</p>
+<p>The same tenant creates most of these messes by omission. A clean joiner process, with a named owner, MFA registered day one, standard groups and a licence chosen on purpose (see <a href="/it/m365-five-person-firm-licence-stack/">the licence stack post</a>), means the leaving process is a checklist instead of an archaeology dig.</p>
 <h2>Every quarter, without fail</h2>
-<p>Run the identity and files sections even when nobody has left. Leaver drift is the visible bug; guest and Anyone-link sprawl is the invisible one. And when the audit finds something, write down the fix while you're in the portal — that document <em>is</em> your offboarding SOP. Count the hours this whole exercise eats if it lands on your accidental IT person, and you'll see <a href="/it/your-team-minus-the-it-day/">what that arrangement costs</a>.</p>
-<p>If you'd rather this was someone else's recurring job — audited, fixed, and reported monthly with the rest of your M365 — that's exactly what our support covers: <a href="https://apxdigital.io/it-support">apxdigital.io/it-support</a>.</p>
+<p>Run the identity and files sections even when nobody has left. Leaver drift is the visible bug; guest and Anyone-link sprawl is the invisible one. And when the audit finds something, write down the fix while you're in the portal. That document <em>is</em> your offboarding SOP. Count the hours this whole exercise eats if it lands on your accidental IT person, and you'll see <a href="/it/your-team-minus-the-it-day/">what that arrangement costs</a>.</p>
+<p>If you'd rather this was someone else's recurring job, audited, fixed, and reported monthly with the rest of your M365, that's exactly what our support covers: <a href="https://apxdigital.io/it-support">apxdigital.io/it-support</a>.</p>
 <p>---</p>
-<p><em>APX Digital — remote-first M365 support for small firms. Birmingham / Coventry / West Midlands.</em></p>
+<p><em>APX Digital: remote-first M365 support for small firms. Birmingham / Coventry / West Midlands.</em></p>
 <p><strong>Info@apxdigital.io · 07753 226214</strong></p>
   <div class="cta">
     <p style="margin-bottom:16px;font-size:14px;">Need a straight answer on this for your business?</p>
