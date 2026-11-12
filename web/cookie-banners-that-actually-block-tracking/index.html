@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<title>Cookie Banners That Actually Block Tracking: UK Rules | APX</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Most UK small business cookie banners let Google Analytics load before anyone clicks. What the ICO requires, the five common faults and the fix we ship.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://blog.apxdigital.io/web/cookie-banners-that-actually-block-tracking/">
+<meta property="og:title" content="Cookie banners that actually block tracking">
+<meta property="og:description" content="What the ICO requires, what UK sites get wrong, and the one-file fix.">
+<meta property="og:image" content="https://blog.apxdigital.io/web/cookie-banners-that-actually-block-tracking/og-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://blog.apxdigital.io/web/cookie-banners-that-actually-block-tracking/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="APX Digital">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cookie banners that actually block tracking">
+<meta name="twitter:description" content="What the ICO requires, what UK sites get wrong, and the one-file fix.">
+<meta name="twitter:image" content="https://blog.apxdigital.io/web/cookie-banners-that-actually-block-tracking/og-1200x630.png">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Cookie banners that actually block tracking: what UK sites get wrong",
+    "description": "Most UK small business cookie banners let Google Analytics load before anyone clicks. What the ICO requires, the five common faults and the fix we ship.",
+    "inLanguage": "en-GB",
+    "datePublished": "2026-11-12",
+    "dateModified": "2026-11-12",
+    "image": "https://blog.apxdigital.io/web/cookie-banners-that-actually-block-tracking/og-1200x630.png",
+    "author": {
+      "@type": "Person",
+      "name": "Jamie Mac",
+      "url": "https://apxdigital.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "APX Digital",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://apxdigital.io/favicon.ico"
+      }
+    },
+    "mainEntityOfPage": "https://blog.apxdigital.io/web/cookie-banners-that-actually-block-tracking/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://apxdigital.io"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://blog.apxdigital.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Web",
+        "item": "https://blog.apxdigital.io/web/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Cookie banners that block tracking"
+      }
+    ]
+  }
+]
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root { --acid:#7FEE64; --ink:#0A0A0A; --paper:#F7F7F5; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--paper); color:var(--ink); font-family:'Space Mono',ui-monospace,monospace; line-height:1.7; -webkit-font-smoothing:antialiased; }
+  header { border-bottom:2px solid var(--ink); padding:22px 40px; display:flex; justify-content:space-between; align-items:center; }
+  .brand { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:.02em; font-size:20px; }
+  .brand .accent { color:var(--acid); }
+  nav a { color:var(--ink); text-decoration:none; font-size:12px; text-transform:uppercase; letter-spacing:.15em; margin-left:24px; }
+  nav a:hover { border-bottom:2px solid var(--acid); }
+  main { max-width:780px; margin:0 auto; padding:56px 40px 80px; }
+  .crumb { font-size:12px; letter-spacing:.15em; text-transform:uppercase; color:#555; margin-bottom:24px; }
+  .crumb a { color:#555; }
+  h1 { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; font-size:38px; line-height:1.1; letter-spacing:.01em; margin-bottom:16px; }
+  .meta { font-size:13px; color:#555; margin-bottom:40px; padding-bottom:24px; border-bottom:2px solid var(--ink); }
+  h2 { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; font-size:20px; margin:44px 0 14px; letter-spacing:.01em; }
+  h3 { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; font-size:15px; margin:32px 0 10px; }
+  p { margin-bottom:18px; }
+  a { color:var(--ink); text-decoration:underline; text-underline-offset:3px; }
+  a:hover { color:var(--acid); }
+  ul, ol { margin:0 0 18px 22px; }
+  li { margin-bottom:8px; }
+  strong { font-weight:700; }
+  .tablewrap { overflow-x:auto; margin:24px 0; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th, td { border:1px solid #ccc; padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--ink); color:var(--acid); font-family:'Archivo',sans-serif; text-transform:uppercase; font-size:12px; letter-spacing:.08em; }
+  code { background:#eee; padding:1px 5px; font-size:.9em; }
+  .cta { margin-top:48px; border-top:2px solid var(--ink); padding-top:28px; text-align:center; }
+  .cta a { display:inline-block; background:var(--ink); color:var(--acid); font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; text-decoration:none; padding:16px 34px; font-size:14px; letter-spacing:.08em; }
+  .cta a:hover { background:var(--acid); color:var(--ink); }
+  footer { border-top:2px solid var(--ink); padding:22px 40px; font-size:12px; color:#555; display:flex; justify-content:space-between; }
+  footer a { color:#555; }
+</style>
+  <!-- Analytics: consent-gated (APX consent kit). Nothing loads until the visitor accepts. -->
+  <script src="/apx-consent.js" defer data-ga="G-G9RPT0746H" data-clarity="zbhfo231bv" data-privacy="https://apxdigital.io/privacy-policy/" data-accent="#0c0f0c"></script>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="/" style="text-decoration:none;color:var(--ink)">APX<span class="accent">.</span></a></div>
+  <nav>
+    <a href="/">Blog</a>
+    <a href="https://apxdigital.io/websites">Services</a>
+    <a href="https://apxdigital.io">Site</a>
+  </nav>
+</header>
+<main>
+  <div class="crumb"><a href="/">Blog</a> / <a href="/web/">Web Builds</a> / <span>Cookie banners that actually block tracking</span></div>
+  <h1>Cookie banners that actually block tracking: what UK sites get wrong</h1>
+  <div class="meta">Published 12 November 2026 &nbsp;·&nbsp; Jamie Mac, APX Digital</div>
+<p>A cookie banner only does its job if nothing optional loads until the visitor says yes. On a lot of small business sites, Google Analytics fires the moment the page opens and the banner sits on top as decoration, which is exactly what UK law says you can't do.</p>
+<p>We found that pattern on several client sites we took over this year. This post explains the rule in plain English, what usually goes wrong, and the one-file fix we now ship on every site we manage.</p>
+<h2>What does UK law actually require?</h2>
+<p>If a cookie or similar tracker isn't covered by an exception, you need consent before it's set. The ICO's guidance is blunt: "If none of the exceptions apply to your use of storage and access technologies, then you must obtain prior consent." It adds that "silence or inactivity doesn't qualify" (<a href="https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/how-do-we-manage-consent-in-practice/" rel="noopener">ICO, consent in practice</a>, checked 12 November 2026).</p>
+<p>Refusing also has to be as easy as accepting. The ICO lists "no option to reject all" as bad practice, and expects optional toggles to be off by default.</p>
+<p>The stakes went up this year. The ICO confirmed on 5 February 2026 that it can now issue fines of up to £17.5 million or 4% of global turnover under the Privacy and Electronic Communications Regulations, the rules that cover cookies (<a href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/02/statement-on-the-commencement-of-the-data-use-and-access-act-duaa/" rel="noopener">ICO statement on the Data (Use and Access) Act</a>, checked 12 November 2026). A small firm is unlikely to see a fine like that, but the ceiling tells you how seriously the rules are now meant.</p>
+<h2>Don't analytics cookies count as exempt now?</h2>
+<p>Partly, and this is where people get caught out. The Data (Use and Access) Act 2025 added an exception for statistics about how a site is used, so you can improve it. The ICO's final guidance, published 29 April 2026, sets conditions: the purpose must be only that, the data has to end up as aggregate statistics, any third-party provider must act only on your behalf, and you still have to tell visitors and give them a simple, free way to object (<a href="https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/what-are-the-exceptions/" rel="noopener">ICO, what are the exceptions</a>, checked 12 November 2026).</p>
+<p>Two limits matter for a typical small business site:</p>
+<ul>
+<li><strong>Advertising is never exempt.</strong> The ICO says online advertising purposes "are not exempt from PECR's consent requirements and never have been."</li>
+<li><strong>Recordings of individual visitors need consent.</strong> Session recording tools such as Microsoft Clarity capture what one person did on the page, and the ICO says logs or recordings of individual visitors need consent.</li>
+</ul>
+<p>The guidance doesn't name products, so whether a given analytics setup fits the exception depends on how it's configured and what the provider does with the data. Our position is simple: we keep Google Analytics and Clarity behind consent on every site. It costs a little data and removes the argument.</p>
+<h2>What do UK sites usually get wrong?</h2>
+<p>These are the faults we see most often when we audit a site, roughly in order of how common they are:</p>
+<ol>
+<li><strong>The tag loads before the banner.</strong> The Google tag sits in the page head as normal, and the banner is a separate plugin that never touches it. Accept and Reject do nothing to what's already running.</li>
+<li><strong>No real Reject button.</strong> There's an Accept button and a link to "settings" three clicks deep.</li>
+<li><strong>Reject doesn't clean up.</strong> Analytics cookies set on a previous visit stay in the browser after the visitor says no.</li>
+<li><strong>One yes covers everything.</strong> A visitor who agreed to basic analytics last month is quietly opted into session recording when a new tool is added.</li>
+<li><strong>No way back.</strong> Once the banner is closed, there's no link to change your mind.</li>
+</ol>
+<h2>How do you check your own site in two minutes?</h2>
+<p>Open your site in a private browser window and don't touch the banner. Open the browser's developer tools, go to the storage or application tab, and look at cookies. If you see names starting <code>_ga</code> or <code>_clck</code> before you've clicked anything, your banner isn't blocking. Then click Reject, reload, and check again. They should be gone.</p>
+<h2>The fix we now ship on every site</h2>
+<p>In November 2026 we rolled out our own consent kit across the sites we build and manage. It's one small JavaScript file in the site's public folder and one tag in the head. We wrote it so the rules above are the default, not a setting someone has to remember:</p>
+<ul>
+<li>Nothing third-party loads until the visitor accepts. Google Consent Mode defaults are set to denied first, and the Google tag, Tag Manager and Clarity are only added to the page after a yes.</li>
+<li>Accept, Reject and Manage sit side by side on the banner, so refusing takes one click.</li>
+<li>Reject, or withdrawing later, deletes the <code>_ga</code>, <code>_clck</code> and <code>_clsk</code> cookies.</li>
+<li>Adding Clarity to a site asks everyone again, because a yes to analytics isn't a yes to session recording.</li>
+<li>A "cookie settings" link anywhere on the page reopens the banner, and with no tracking IDs set the file does nothing at all.</li>
+</ul>
+<p>Because it's one file and one line, it works the same on a plain HTML site, a React build or an Astro site. That matters on an estate like ours, where no two sites were built the same way. This blog runs it too.</p>
+<h2>What should a small business do this week?</h2>
+<p>Run the two-minute check above. If cookies appear before consent, the fix is usually an afternoon's work, not a rebuild. Make sure your privacy notice names each tool you use, including any session recording, and that the banner links to it.</p>
+<p>If your site was a budget build, this is one of the things that tends to be skipped; we cover what each price point should include in <a href="/web/template-site-vs-bespoke-build-cost/">template site vs bespoke build</a>. And if you're weighing up compliance risk more widely, our <a href="/cyber/small-business-breach-maths/">breach maths for small businesses</a> puts real numbers on the other half of it.</p>
+<p>Want us to check your banner and fix it properly? Start with the <a href="https://apxdigital.io/websites">website service page</a>, or email Info@apxdigital.io · 07753 226214.</p>
+  <div class="cta">
+    <p style="margin-bottom:16px;font-size:14px;">Need a straight answer on this for your business?</p>
+    <a href="https://apxdigital.io/websites">Talk to APX Digital</a>
+  </div>
+</main>
+<footer>
+  <div>APX Digital · Web Builds briefs</div>
+  <div><a href="https://apxdigital.io">apxdigital.io</a> · <a href="mailto:Info@apxdigital.io">Info@apxdigital.io</a></div>
+</footer>
+</body>
+</html>
